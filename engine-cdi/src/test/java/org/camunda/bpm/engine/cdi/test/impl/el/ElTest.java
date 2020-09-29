@@ -37,6 +37,12 @@ public class ElTest extends CdiProcessEngineTestCase {
 
   @Test
   @Deployment
+  public void testDelegateExpression() throws Exception {
+    runtimeService.startProcessInstanceByKey("testDelegateExpression");
+  }
+
+  @Test
+  @Deployment
   public void testDependentScoped() {
 
     DependentScopedBean.reset();
